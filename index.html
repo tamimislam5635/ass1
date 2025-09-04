@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark UI Template with Section</title>
+  <title>Light UI Template with Sections</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff; 
+      background-color: #ffffff;
       color: #000000;
     }
 
@@ -21,6 +21,7 @@
       align-items: center;
       box-sizing: border-box;
       background-color: #fff7f7;
+      border-bottom: 1px solid #eee;
     }
 
     nav .logo {
@@ -51,25 +52,25 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 38px;
       margin-bottom: 20px;
       color: #000000;
     }
 
     .hero p {
       font-size: 16px;
-      color: #000000;
+      color: #444;
       margin-bottom: 30px;
       max-width: 500px;
     }
 
     .hero .hero-btn {
       background-color: #6366f1;
-      color: rgb(0, 0, 0);
+      color: #ffffff;
       border: none;
       padding: 12px 25px;
       border-radius: 8px;
@@ -80,13 +81,6 @@
 
     .hero .hero-btn:hover {
       background-color: #4f46e5;
-    }
-
-    .hero img {
-      margin-top: 40px;
-      max-width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     /* Side by side section */
@@ -114,13 +108,13 @@
 
     .side-section p {
       font-size: 16px;
-      color: #000000;
+      color: #444;
       margin-bottom: 20px;
     }
 
     .side-section .launch-btn {
       background-color: #6366f1;
-      color: rgb(0, 0, 0);
+      color: #ffffff;
       border: none;
       padding: 12px 25px;
       border-radius: 8px;
@@ -142,10 +136,109 @@
     .side-section .image img {
       width: 100%;
       border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
-  
+    /* Productive Users Section */
+    .stats-section {
+      background-color: #d9d9ef; 
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin: 60px 20px;
+    }
+
+    .stats-section h2 {
+      font-size: 22px;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 32px;
+      color: #6366f1;
+      margin-bottom: 10px;
+    }
+
+    .stat p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Reviews Section */
+    .reviews {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .reviews h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .review-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .review-card {
+      background: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .review-card .stars {
+      color: gold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .review-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .review-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .review-footer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .review-footer img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .review-footer .info {
+      font-size: 12px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -156,20 +249,75 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <h1>Cool Dark UI Template for <br> Webflow Agencies!</h1>
+    <h1>Cool Bright UI Template for <br> Webflow Agencies!</h1>
+    <p>A clean and modern bright design that helps your brand stand out.</p>
     <button class="hero-btn">Stay Focused</button>
-    
   </div>
 
   <!-- Side by Side Section -->
   <div class="side-section">
     <div class="text">
       <h2>See It in Action</h2>
-      <p>Explore the live preview and imagine your brand in this bold new look.</p>
+      <p>Explore the live preview and imagine your brand in this fresh new look.</p>
       <button class="launch-btn">Launch Live Preview</button>
     </div>
     <div class="image">
       <img src="Assets/wc-mini.png" alt="">
+    </div>
+  </div>
+
+  <!-- Productive Users Section -->
+  <div class="stats-section">
+    <h2>Joined Thousands of Productive Users</h2>
+    <div class="stats-container">
+      <div class="stat">
+        <h3>50K</h3>
+        <p>Active Users</p>
+      </div>
+      <div class="stat">
+        <h3>2M+</h3>
+        <p>Focus Sessions</p>
+      </div>
+      <div class="stat">
+        <h3>95%</h3>
+        <p>Satisfaction Rate</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reviews">
+    <h2>What our users say</h2>
+    <div class="review-container">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="review-footer">
+          <img src="Assets/avatar.png" alt="">
+          <div class="info">Reviewer name <br> Date</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="review-footer">
+          <img src="Assets/avatar.png" alt="">
+          <div class="info">Reviewer name <br> Date</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="review-footer">
+          <img src="Assets/avatar.png" alt="">
+          <div class="info">Reviewer name <br> Date</div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
