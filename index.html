@@ -3,273 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light UI Template with Sections</title>
+  <title>Service Website</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      margin: 0;
+      padding: 0;
+      background: #f8f9ff;
+      color: #333;
     }
 
-    /* Navbar */
-    nav {
-      width: 100%;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-sizing: border-box;
-      background-color: #fff7f7;
-      border-bottom: 1px solid #eee;
-    }
-
-    nav .logo {
-      font-weight: bold;
-      color: #6366f1;
-      font-size: 20px;
-    }
-
-    nav .signup-btn {
-      background-color: #6366f1;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-
-    nav .signup-btn:hover {
-      background-color: #4f46e5;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 20px;
-      color: #000000;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: #444;
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-
-    .hero .hero-btn {
-      background-color: #6366f1;
-      color: #ffffff;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-
-    .hero .hero-btn:hover {
-      background-color: #4f46e5;
-    }
-
-    /* Side by side section */
-    .side-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px;
-      gap: 40px;
-    }
-
-    .side-section .text {
-      flex: 1;
-      min-width: 280px;
-      max-width: 500px;
-      text-align: left;
-    }
-
-    .side-section h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #000000;
-    }
-
-    .side-section p {
-      font-size: 16px;
-      color: #444;
-      margin-bottom: 20px;
-    }
-
-    .side-section .launch-btn {
-      background-color: #6366f1;
-      color: #ffffff;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-
-    .side-section .launch-btn:hover {
-      background-color: #4f46e5;
-    }
-
-    .side-section .image {
-      flex: 1;
-      min-width: 280px;
-      max-width: 500px;
-    }
-
-    .side-section .image img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    /* Productive Users Section */
-    .stats-section {
-      background-color: #d9d9ef; 
-      text-align: center;
+    section {
       padding: 60px 20px;
-      border-radius: 16px;
-      margin: 60px 20px;
+      text-align: center;
     }
 
-    .stats-section h2 {
-      font-size: 22px;
+    /* ===== Productive Users ===== */
+    .stats {
+      background: #eef0ff;
+      border-radius: 15px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .stats h2 {
+      font-size: 24px;
+      font-weight: bold;
       margin-bottom: 40px;
-      color: #000000;
     }
-
-    .stats-container {
+    .stats-grid {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 60px;
+      flex-wrap: wrap;
     }
-
     .stat {
       text-align: center;
     }
-
     .stat h3 {
       font-size: 32px;
-      color: #6366f1;
-      margin-bottom: 10px;
+      font-weight: bold;
+      color: #4a4fff;
     }
-
     .stat p {
       font-size: 14px;
       color: #555;
     }
 
-    /* Reviews Section */
-    .reviews {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
+    /* ===== Reviews ===== */
     .reviews h2 {
       font-size: 24px;
+      font-weight: bold;
       margin-bottom: 40px;
-      color: #000000;
     }
-
-    .review-container {
+    .reviews-grid {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
-
     .review-card {
-      background: #ffffff;
-      border: 1px solid #eee;
+      background: white;
       border-radius: 12px;
       padding: 20px;
-      width: 280px;
+      max-width: 300px;
       text-align: left;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
-    .review-card .stars {
-      color: gold;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
     .review-card h3 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #000000;
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
     }
-
     .review-card p {
       font-size: 14px;
       color: #555;
-      margin-bottom: 20px;
     }
-
-    .review-footer {
+    .stars {
+      color: gold;
+    }
+    .reviewer {
       display: flex;
       align-items: center;
       gap: 10px;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #777;
     }
-
-    .review-footer img {
+    .reviewer img {
       width: 30px;
       height: 30px;
       border-radius: 50%;
     }
 
-    .review-footer .info {
-      font-size: 12px;
-      color: #777;
+    /* ===== Focus Section ===== */
+    .focus {
+      background: white;
+      border-radius: 15px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .focus h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .focus p {
+      font-size: 14px;
+      color: #555;
+    }
+    .focus button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #4a4fff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .focus button:hover {
+      background: #3737d9;
+    }
+    .focus img {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact {
+      background: #eef0ff;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1000px;
+      margin: auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .contact h2 {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: left;
+    }
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    form label {
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    form button {
+      width: 100%;
+      padding: 12px;
+      background: #4a4fff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    form button:hover {
+      background: #3737d9;
+    }
+
+    @media(max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+      .contact h2 {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="logo">LOGO</div>
-    <button class="signup-btn">Sign Up</button>
-  </nav>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Cool Bright UI Template for <br> Webflow Agencies!</h1>
-    <p>A clean and modern bright design that helps your brand stand out.</p>
-    <button class="hero-btn">Stay Focused</button>
-  </div>
-
-  <!-- Side by Side Section -->
-  <div class="side-section">
-    <div class="text">
-      <h2>See It in Action</h2>
-      <p>Explore the live preview and imagine your brand in this fresh new look.</p>
-      <button class="launch-btn">Launch Live Preview</button>
-    </div>
-    <div class="image">
-      <img src="Assets/wc-mini.png" alt="">
-    </div>
-  </div>
-
-  <!-- Productive Users Section -->
-  <div class="stats-section">
+  <!-- Productive Users -->
+  <section class="stats">
     <h2>Joined Thousands of Productive Users</h2>
-    <div class="stats-container">
+    <div class="stats-grid">
       <div class="stat">
         <h3>50K</h3>
         <p>Active Users</p>
@@ -283,42 +216,82 @@
         <p>Satisfaction Rate</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Reviews Section -->
-  <div class="reviews">
+  <!-- Reviews -->
+  <section class="reviews">
     <h2>What our users say</h2>
-    <div class="review-container">
+    <div class="reviews-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <h3>Loved by Designers</h3>
         <p>This template instantly leveled up our presence.” – Studio Vertex</p>
-        <div class="review-footer">
-          <img src="Assets/avatar.png" alt="">
-          <div class="info">Reviewer name <br> Date</div>
+        <div class="reviewer">
+          <img src="your-img.png" alt="Reviewer">
+          <div>
+            <p>Reviewer name</p>
+            <p>Date</p>
+          </div>
         </div>
       </div>
-
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <h3>Loved by Designers</h3>
         <p>This template instantly leveled up our presence.” – Studio Vertex</p>
-        <div class="review-footer">
-          <img src="Assets/avatar.png" alt="">
-          <div class="info">Reviewer name <br> Date</div>
+        <div class="reviewer">
+          <img src="your-img.png" alt="Reviewer">
+          <div>
+            <p>Reviewer name</p>
+            <p>Date</p>
+          </div>
         </div>
       </div>
-
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <h3>Loved by Designers</h3>
         <p>This template instantly leveled up our presence.” – Studio Vertex</p>
-        <div class="review-footer">
-          <img src="Assets/avatar.png" alt="">
-          <div class="info">Reviewer name <br> Date</div>
+        <div class="reviewer">
+          <img src="your-img.png" alt="Reviewer">
+          <div>
+            <p>Reviewer name</p>
+            <p>Date</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Focus Section -->
+  <section class="focus">
+    <h2>Ready to focus better</h2>
+    <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+    <button>Get Started Free</button>
+    <br>
+    <img src="Assets/wc-big.png" alt="">
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div>
+        <h2>Let’s Get in<br>Touch</h2>
+      </div>
+      <div>
+        <form>
+          <label>Email</label>
+          <input type="email" placeholder="example@email.com">
+
+          <label>Name</label>
+          <input type="text" placeholder="full name">
+
+          <label>Message</label>
+          <textarea rows="4" placeholder="write your message..."></textarea>
+
+          <button type="submit">Get in Touch</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
